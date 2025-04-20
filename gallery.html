@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khám Phá Vũ Trụ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <div class="toggle-theme">
+  <button id="themeToggle"><i class="fas fa-moon"></i> Chế độ Tối</button>
+</div>
+</head>
+<body>
+ <header class="hero">
+<video autoplay muted loop playsinline
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+    <source src="video/video.mp4" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video HTML5.
+  </video>
+
+  <div class="overlay">
+
+    <!-- Thanh top: tất cả nằm trong top-bar -->
+    <div class="top-bar">
+      <!-- Logo + Tên website -->
+      <div class="logo-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="Logo" class="logo" />
+        <h1 class="site-name">
+          <a href="index.html">Khám Phá Vũ Trụ</a>
+        </h1>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="navigation">
+        <div class="dropdown">
+          <button class="dropbtn">Khám phá</button>
+          <div class="dropdown-content">
+            <a href="mission.html">Sứ mệnh</a>
+            <a href="gallery.html">Thư viện</a>
+            <a href="news.html">Tin tức</a>
+            <a href="technology.html">Công nghệ</a>
+            <a href="planets.html">Hành tinh</a>
+            <a href="telescopes.html">Kính viễn vọng</a>
+            <a href="research.html">Nghiên cứu</a>
+          </div>
+        </div>
+        <a href="contact.html">Liên hệ</a>
+        <a href="faq.html">FAQ</a>
+        <a href="join.html">Gia nhập vũ trụ</a>
+      </nav>
+
+      <!-- Thanh tìm kiếm -->
+      <form class="search-box">
+        <input type="text" placeholder="Tìm kiếm thông tin...">
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+
+     </div>
+</header>
+    <main>
+    <section class="featured-articles">
+      <h2>Thư viện Hình ảnh Vũ Trụ</h2>
+      <div class="image-grid">
+        <div class="image-card">
+          <img src="https://vnn-imgs-f.vgcloud.vn/2018/02/06/11/dai-ngan-ha-la-gi.jpg?width=0&s=pCVJt3XnTntNe89uqQx5UA" alt="Không gian 1">
+          <p class="image-description">Hố đen và sóng hấp dẫn</p>
+        </div>
+        <div class="image-card">
+          <img src="https://img.pikbest.com/back_our/20210706/bg/37471396bfeb8.png!w700wp" alt="Không gian 2">
+          <p class="image-description">Dải Ngân Hà</p>
+        </div>
+        <div class="image-card">
+          <img src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474093cyV/anh-nen-bau-troi-sao-sang-tuyet-dep-full-hd_023419278.jpg" alt="Không gian 3">
+          <p class="image-description">Ngôi sao xa xôi</p>
+        </div>
+        <div class="image-card">
+            <img src="https://vnn-imgs-f.vgcloud.vn/2018/02/06/10/tim-hieu-mot-so-thien-thach-pho-bien.jpg?width=0&s=4-G4yBEQg2RMsP-Hn3hKKA" alt="Không gian 4 ">
+            <p class="image-description">Sao chổi, tiểu hành tinh và thiên thạch </p>
+          </div>
+          <div class="image-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToCv2DNSXD_O4OXNJPIt-_SlKouGirvxZQgSz461RAnQG8ff-TjVJYlNqYMk4JPagO7uI&usqp=CAU" alt="Không gian 5 ">
+            <p class="image-description">Hệ Mặt Trời </p>
+          </div>
+          <div class="image-card">
+            <img src="https://cdnphoto.dantri.com.vn/QZu9HmcdMBS8FdbU6TlIztj9-fY=/thumb_w/1020/2023/03/09/tram-vu-tru-iss-1678316921045.jpeg" alt="Không gian 6 ">
+            <p class="image-description"> Tàu vũ trụ và trạm không gian </p>
+          </div>
+          <div class="image-card">
+              <img src="https://e.khoahoc.tv/photos/image/2015/11/05/tinh-van-4.jpg" alt="Không gian 7 ">
+              <p class="image-description">Các tinh vân (nebulae)
+            </p>
+            </div>
+            <div class="image-card">
+              <img src="https://media.vietnamplus.vn/images/7255a701687d11cb8c6bbc58a6c8078525ee635b9fba93e9362e81fd1232dcdbe2e666d269e0ab743642ec36231289da981aef34bc2a5a729726402b3350ee21/sao_moc_james_webb.jpg" alt="Không gian 8 ">
+              <p class="image-description">Vũ trụ sâu – hình ảnh từ kính viễn vọng James Webb </p>
+            </div>
+      </div>
+      <div style="margin-top: 40px;">
+        <a href="index.html" class="back-to-home-btn">Quay lại Trang Chủ</a>
+      </div>
+    </section>
+  </main>
+<footer>
+  <div class="footer-container">
+    <div class="footer-contact">
+      <h4>Liên hệ</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: 20 Quang Trung, Nghĩa Tân, Gia Nghĩa</p>
+      <p><i class="fas fa-phone-alt"></i> Điện thoại: 0982141340</p>
+      <p><i class="fas fa-envelope"></i> Email: PhucNhiQuynhAnh@khamphavutru.vn</p>
+    </div>
+    <div class="footer-social">
+      <h4>Kết nối với chúng tôi</h4>
+      <div class="social-icons">
+        <a href="https://facebook.com/toyeuthienvanhoc" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@ThuVienThienVan" target="_blank" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://tiktok.com/@thienvanvutruhoc" target="_blank" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  </footer>
+  <script>
+    const toggleButton = document.getElementById('themeToggle');
+    const body = document.body;
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('light-mode')) {
+        toggleButton.innerHTML = '<i class="fas fa-sun"></i> Chế độ Sáng';
+      } else {
+        toggleButton.innerHTML = '<i class="fas fa-moon"></i> Chế độ Tối';
+      }
+    });
+function createShootingStar() {
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+      const startX = Math.random() * window.innerWidth;
+    const startY = -10;
+    const endX = Math.random() * window.innerWidth;
+
+   
+    star.style.left = `${startX}px`;
+    star.style.top = `${startY}px`;
+    const size = Math.random() * 5 + 5; 
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+
+    
+    const duration = Math.random() * 1 + 2; 
+    star.style.animationDuration = `${duration}s`;
+
+    
+    const angle = Math.random() * 40 - 20; 
+    star.style.transform = `rotate(${angle}deg)`;
+
+    
+    document.body.appendChild(star);
+
+   
+    setTimeout(() => {
+      star.remove();
+    }, duration * 1000);
+  }
+
+  
+  setInterval(createShootingStar, 200); 
+
+  </script>
+</body>
+</html>

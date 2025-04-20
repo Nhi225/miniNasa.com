@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khám Phá Vũ Trụ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <div class="toggle-theme">
+  <button id="themeToggle"><i class="fas fa-moon"></i> Chế độ Tối</button>
+</div>
+</head>
+<body>
+<header class="hero">
+   <!-- Video nền -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="video/vid3.mp4" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video HTML5.
+  </video>
+
+  <div class="overlay">
+
+    <!-- Thanh top: tất cả nằm trong top-bar -->
+    <div class="top-bar">
+      <!-- Logo + Tên website -->
+      <div class="logo-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="Logo" class="logo" />
+        <h1 class="site-name">
+          <a href="index.html">Khám Phá Vũ Trụ</a>
+        </h1>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="navigation">
+        <div class="dropdown">
+          <button class="dropbtn">Khám phá</button>
+          <div class="dropdown-content">
+            <a href="mission.html">Sứ mệnh</a>
+            <a href="gallery.html">Thư viện</a>
+            <a href="news.html">Tin tức</a>
+            <a href="technology.html">Công nghệ</a>
+            <a href="planets.html">Hành tinh</a>
+            <a href="telescopes.html">Kính viễn vọng</a>
+            <a href="research.html">Nghiên cứu</a>
+          </div>
+        </div>
+        <a href="contact.html">Liên hệ</a>
+        <a href="faq.html">FAQ</a>
+        <a href="join.html">Gia nhập vũ trụ</a>
+      </nav>
+
+      <!-- Thanh tìm kiếm -->
+      <form class="search-box">
+        <input type="text" placeholder="Tìm kiếm thông tin...">
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+
+      </div>
+</header> <main>
+  <section style="max-width: 600px; margin: 40px auto; padding: 30px; background: #1a1a2e; border-radius: 12px; color: #f5f5f5; box-shadow: 0 0 15px rgba(0,0,0,0.4);">
+    <h2 style="text-align: center; margin-bottom: 20px; color: #1874cd;">🚀 Gia Nhập Cộng Đồng Vũ Trụ</h2>
+       <!-- Form đăng ký -->
+
+    <form id="joinForm" onsubmit="showThankYouMessage(event)">
+ <p style="text-align: center; margin-bottom: 30px;">Trở thành một phần của cộng đồng yêu thích vũ trụ – nhận bản tin, tham gia sự kiện và khám phá bí ẩn không gian!</p>
+    
+
+      <label for="name" style="font-weight: bold;">👤 Họ tên:</label>
+      <input type="text" id="name" name="name" required
+        style="width: 100%; padding: 10px; margin: 8px 0 20px; border: none; border-radius: 8px; background: #2a2a40; color: #fff;" />
+
+      <label for="email" style="font-weight: bold;">📧 Email:</label>
+      <input type="email" id="email" name="email" required
+        style="width: 100%; padding: 10px; margin: 8px 0 20px; border: none; border-radius: 8px; background: #2a2a40; color: #fff;" />
+
+      <label for="interests" style="font-weight: bold;">🔭 Lĩnh vực quan tâm:</label>
+      <select id="interests" name="interests"
+        style="width: 100%; padding: 10px; margin: 8px 0 30px; border: none; border-radius: 8px; background: #2a2a40; color: #fff;">
+        <option value="missions">Sứ mệnh</option>
+        <option value="technology">Công nghệ</option>
+        <option value="planets">Hành tinh</option>
+        <option value="research">Nghiên cứu</option>
+        <option value="telescopes">Kính viễn vọng</option>
+      </select>
+
+      <button type="submit"
+        style="width: 100%; padding: 12px; background-color: #1874cd; border: none; border-radius: 8px; font-weight: bold; color: black; cursor: pointer; transition: background 0.3s;">
+        🚀 Gia nhập ngay
+      </button>
+    </form>
+
+    <!-- Thông báo cảm ơn -->
+     <p id="thankYouMessage" style="display: none; text-align: center; font-size: 18px; color:#ff1493; margin-top: 20px; font-weight: bold;">
+      Cảm ơn bạn đã chọn chúng tôi! Chúc bạn có một trải nghiệm đẹp=33333
+    </p>
+
+    <!-- Nút quay lại trang chủ -->
+    <div id="backButton" style="display: none; text-align: center; margin-top: 20px;">
+      <a href="index.html" style="text-decoration: none; background-color: #1874cd; color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: bold; cursor: pointer; display: inline-block;">
+        Quay lại trang chủ
+      </a>
+    </div>
+  </section>
+</main>
+
+<script>
+  function showThankYouMessage(event) {
+    event.preventDefault(); 
+        document.getElementById('joinForm').style.display = 'none';
+    document.getElementById('thankYouMessage').style.display = 'block';
+    document.getElementById('backButton').style.display = 'block'; 
+  }
+</script>
+
+  <footer>
+  <div class="footer-container">
+    <div class="footer-contact">
+      <h4>Liên hệ</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: 20 Quang Trung, Nghĩa Tân, Gia Nghĩa</p>
+      <p><i class="fas fa-phone-alt"></i> Điện thoại: 0982141340</p>
+      <p><i class="fas fa-envelope"></i> Email: NhiPhucQuynhAnh@khamphavutru.vn</p>
+    </div>
+
+    <div class="footer-social">
+      <h4>🌐Kết nối với chúng tôi</h4>
+      <div class="social-icons">
+        <a href="https://facebook.com/toyeuthienvanhoc" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@ThuVienThienVan" target="_blank" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://tiktok.com/@thienvanvutruhoc" target="_blank" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+ </footer>
+  <script>
+    const toggleButton = document.getElementById('themeToggle');
+    const body = document.body;
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('light-mode')) {
+        toggleButton.innerHTML = '<i class="fas fa-sun"></i> Chế độ Sáng';
+      } else {
+        toggleButton.innerHTML = '<i class="fas fa-moon"></i> Chế độ Tối';
+      }
+    });
+  </script>
+</body>
+</html>

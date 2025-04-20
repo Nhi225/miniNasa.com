@@ -1,0 +1,67 @@
+/* Fade-in effect khi cuộn */
+.fade-in {
+  opacity: 0; /* Bắt đầu ẩn */
+  transform: translateY(20px); /* Đẩy xuống dưới */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Cấu hình hiệu ứng mượt mà */
+}
+
+/* Khi phần tử cuộn vào màn hình, thêm class "show" */
+.fade-in.show {
+  opacity: 1; /* Làm phần tử xuất hiện */
+  transform: translateY(0); /* Quay lại vị trí ban đầu */
+}
+
+ /* Hiệu ứng zoom khi hover vào ảnh */
+img:hover {
+  transform: scale(1.03); /* Phóng to ảnh khi rê chuột */
+  transition: transform 0.3s ease-in-out; /* Hiệu ứng chuyển động mượt mà */
+}
+/* Nút Quay lại với hiệu ứng ánh sáng */
+.back-to-home-btn {
+  display: inline-block;
+  background-color: #2980b9;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  animation: pulse 2s infinite; /* Thêm hiệu ứng ánh sáng nhấp nháy */
+}
+
+/* Khi rê chuột vào nút */
+.back-to-home-btn:hover {
+  background-color: #3498db; /* Thay đổi màu nền khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+/* Animation pulse để tạo hiệu ứng ánh sáng nhấp nháy */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(41, 128, 185, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(41, 128, 185, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(41, 128, 185, 0); }
+}
+/* Nền sao lấp lánh */
+body {
+  background-color: #1e1e1e; /* Nền tối để tạo không gian vũ trụ */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Các ngôi sao lấp lánh */
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.star:nth-child(1) { width: 2px; height: 2px; top: 20%; left: 10%; animation-duration: 2.5s; }
+.star:nth-child(2) { width: 3px; height: 3px; top: 50%; left: 40%; animation-duration: 3s; }
+.star:nth-child(3) { width: 1px; height: 1px; top: 30%; left: 80%; animation-duration: 4s; }

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khám Phá Vũ Trụ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <div class="toggle-theme">
+  <button id="themeToggle"><i class="fas fa-moon"></i> Chế độ Tối</button>
+</div>
+</head>
+<body>
+  <header class="hero">
+<video autoplay muted loop playsinline
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+    <source src="video/vid7.mp4" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video HTML5.
+  </video>
+
+  <div class="overlay">
+
+    <!-- Thanh top: tất cả nằm trong top-bar -->
+    <div class="top-bar">
+      <!-- Logo + Tên website -->
+      <div class="logo-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="Logo" class="logo" />
+        <h1 class="site-name">
+          <a href="index.html">Khám Phá Vũ Trụ</a>
+        </h1>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="navigation">
+        <div class="dropdown">
+          <button class="dropbtn">Khám phá</button>
+          <div class="dropdown-content">
+            <a href="mission.html">Sứ mệnh</a>
+            <a href="gallery.html">Thư viện</a>
+            <a href="news.html">Tin tức</a>
+            <a href="technology.html">Công nghệ</a>
+            <a href="planets.html">Hành tinh</a>
+            <a href="telescopes.html">Kính viễn vọng</a>
+            <a href="research.html">Nghiên cứu</a>
+          </div>
+        </div>
+        <a href="contact.html">Liên hệ</a>
+        <a href="faq.html">FAQ</a>
+        <a href="join.html">Gia nhập vũ trụ</a>
+      </nav>
+
+      <!-- Thanh tìm kiếm -->
+      <form class="search-box">
+        <input type="text" placeholder="Tìm kiếm thông tin...">
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+
+     </div>
+</header> 
+ <main>
+  <section class="featured-articles">
+  <h2 class="section-title">Các Hành Tinh Trong Hệ Mặt Trời</h2>
+  <p class="section-summary">Khám phá các hành tinh trong Hệ Mặt Trời, từ hành tinh gần Mặt Trời nhất đến hành tinh xa nhất, cùng với đặc điểm và sự thú vị của từng hành tinh.</p>
+
+  <body style="margin: 0; padding: 40px; background-color: #0d1b2a; font-family: Arial, sans-serif; color: white;">
+    
+  
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; max-width: 1200px; margin: auto;">
+  
+      <!-- Mercury -->
+      <div style="background-color: #1b263b; border-radius: 12px; padding: 15px; text-align: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg" alt="Mercury" style="width: 100%; border-radius: 10px;">
+        <h3 style="color: #ffd700; margin-top: 10px;">Sao Thủy</h3>
+        <p>Hành tinh nhỏ nhất và gần Mặt Trời nhất, có bề mặt đầy miệng núi lửa và nhiệt độ biến đổi lớn.</p>
+      </div>
+  
+      <!-- Venus -->
+<div style="background-color: #1b263b; border-radius: 12px; padding: 15px; text-align: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg" alt="Venus" style="width: 100%; border-radius: 10px;">
+        <h3 style="color: #ffd700; margin-top: 10px;">Sao Kim</h3>
+        <p>Có khí quyển dày CO₂ gây hiệu ứng nhà kính mạnh, là hành tinh nóng nhất hệ Mặt Trời.</p>
+      </div>
+  
+      <!-- Earth -->
+      <div style="background-color: #1b263b; border-radius: 12px; padding: 15px; text-align: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/The_Blue_Marble_%28remastered%29.jpg" alt="Earth" style="width: 100%; border-radius: 10px;">
+        <h3 style="color: #ffd700; margin-top: 10px;">Trái Đất</h3>
+        <p>Hành tinh duy nhất có sự sống, với khí hậu và điều kiện lý tưởng cho sinh vật phát triển.</p>
+      </div>
+  
+      <!-- Mars -->
+      <div style="background-color: #1b263b; border-radius: 12px; padding: 15px; text-align: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Mars" style="width: 100%; border-radius: 10px;">
+        <h3 style="color: #ffd700; margin-top: 10px;">Sao Hỏa</h3>
+        <p>Được gọi là "Hành tinh Đỏ", có thể từng có nước và là mục tiêu của các sứ mệnh khám phá sự sống.</p>
+      </div>
+  
+      <!-- Jupiter -->
+      <div style="background-color: #1b263b; border-radius: 12px; padding: 15px; text-align: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg" alt="Jupiter" style="width: 100%; border-radius: 10px;">
+        <h3 style="color: #ffd700; margin-top: 10px;">Sao Mộc</h3>
+        <p>Hành tinh lớn nhất, có cơn bão Vết Đỏ Lớn và nhiều mặt trăng thú vị như Europa.</p>
+      </div>
+  
+      <!-- Saturn -->
+      <div style="background-color: #1b263b; border-radius: 12px; padding: 15px; text-align: center;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0DeZDcSl4C5mURNJtfvMPtfs2jMUuFda6VmuG5ayhHLmewTUS92uYfp7AysGQNrbjB5M&usqp=CAU" alt="Saturn" style="width: 100%; border-radius: 10px;">
+        <h3 style="color: #ffd700; margin-top: 10px;">Sao Thổ</h3>
+        <p>Nổi bật với hệ thống vành đai tuyệt đẹp, là một trong những hành tinh dễ nhận biết nhất.</p>
+      </div>
+  
+      <!-- Uranus -->
+      <div style="background-color: #1b263b; border-radius: 12px; padding: 15px; text-align: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg" alt="Uranus" style="width: 100%; border-radius: 10px;">
+        <h3 style="color: #ffd700; margin-top: 10px;">Thiên Vương Tinh</h3>
+        <p>Hành tinh nghiêng đặc biệt, xoay gần như nằm ngang, có màu xanh lam nhạt do methane.</p>
+      </div>
+  
+      <!-- Neptune -->
+<div style="background-color: #1b263b; border-radius: 12px; padding: 15px; text-align: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg" alt="Neptune" style="width: 100%; border-radius: 10px;">
+        <h3 style="color: #ffd700; margin-top: 10px;">Hải Vương Tinh</h3>
+        <p>Hành tinh xa nhất, có bầu khí quyển xanh đậm và gió mạnh nhất từng được ghi nhận.</p>
+      </div>
+  
+    </div>
+    
+      </div>
+  <div style="margin-top: 40px;">
+        <a href="index.html" class="back-to-home-btn">Quay lại Trang Chủ</a>
+      </div>
+</section>
+  </main>
+  <footer>
+  <div class="footer-container">
+    <div class="footer-contact">
+      <h4>Liên hệ</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: 20 Quang Trung, Nghĩa Tân, Gia Nghĩa</p>
+      <p><i class="fas fa-phone-alt"></i> Điện thoại: 0982141340</p>
+      <p><i class="fas fa-envelope"></i> Email: NhiPhucQuynhAnh@khamphavutru.vn</p>
+    </div>
+    <div class="footer-social">
+      <h4>Kết nối với chúng tôi</h4>
+      <div class="social-icons">
+        <a href="https://facebook.com/toyeuthienvanhoc" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@ThuVienThienVan" target="_blank" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://tiktok.com/@thoienvanvutruhoc" target="_blank" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+ </footer>
+  <script>
+    const toggleButton = document.getElementById('themeToggle');
+    const body = document.body;
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('light-mode')) {
+        toggleButton.innerHTML = '<i class="fas fa-sun"></i> Chế độ Sáng';
+      } else {
+        toggleButton.innerHTML = '<i class="fas fa-moon"></i> Chế độ Tối';
+      }
+    });
+function createShootingStar() {
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+    
+    const startX = Math.random() * window.innerWidth;
+    const startY = -10;
+    const endX = Math.random() * window.innerWidth;
+
+    
+    star.style.left = `${startX}px`;
+    star.style.top = `${startY}px`;
+    const size = Math.random() * 5 + 5; 
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+
+        const duration = Math.random() * 1 + 2; 
+    star.style.animationDuration = `${duration}s`;
+
+    
+    const angle = Math.random() * 40 - 20; 
+    star.style.transform = `rotate(${angle}deg)`;
+
+   
+    document.body.appendChild(star);
+
+   
+    setTimeout(() => {
+      star.remove();
+    }, duration * 1000);
+  }
+
+  
+  setInterval(createShootingStar, 200);
+
+  </script>
+</body>

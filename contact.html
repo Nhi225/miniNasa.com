@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khám Phá Vũ Trụ</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+<div class="toggle-theme">
+    <button id="themeToggle"><i class="fas fa-moon"></i> Chế độ Tối</button>
+  </div>
+  <header class="hero">
+    <video autoplay muted loop playsinline
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+      <source src="video/vid7.mp4" type="video/mp4" />
+      Trình duyệt của bạn không hỗ trợ video HTML5.
+    </video>
+  <div class="overlay">
+
+    <!-- Thanh top: tất cả nằm trong top-bar -->
+    <div class="top-bar">
+      <!-- Logo + Tên website -->
+      <div class="logo-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="Logo" class="logo" />
+        <h1 class="site-name">
+          <a href="index.html">Khám Phá Vũ Trụ</a>
+        </h1>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="navigation">
+        <div class="dropdown">
+          <button class="dropbtn">Khám phá</button>
+          <div class="dropdown-content">
+            <a href="mission.html">Sứ mệnh</a>
+            <a href="gallery.html">Thư viện</a>
+            <a href="news.html">Tin tức</a>
+            <a href="technology.html">Công nghệ</a>
+            <a href="planets.html">Hành tinh</a>
+            <a href="telescopes.html">Kính viễn vọng</a>
+            <a href="research.html">Nghiên cứu</a>
+          </div>
+        </div>
+        <a href="contact.html">Liên hệ</a>
+        <a href="faq.html">FAQ</a>
+        <a href="join.html">Gia nhập vũ trụ</a>
+      </nav>
+
+      <!-- Thanh tìm kiếm -->
+      <form class="search-box">
+        <input type="text" placeholder="Tìm kiếm thông tin...">
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+
+    </div>
+</header>
+
+  <html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hỗ Trợ Trực Tuyến</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .chat-container {
+      max-width: 500px;
+      height: 80vh;
+      margin: 50px auto;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 18px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .chat-box {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      background-color: #f9fafb;
+    }
+
+    .message {
+      margin-bottom: 12px;
+      max-width: 75%;
+      padding: 10px 14px;
+      border-radius: 12px;
+      clear: both;
+      display: inline-block;
+    }
+
+    .user-message {
+      background-color:#8b0a50;
+      float: right;
+      text-align: right;
+    }
+
+    .bot-message {
+      background-color: #104e8b;
+      float: left;
+    }
+
+    .chat-input-area {
+      display: flex;
+      padding: 12px 16px;
+      border-top: 1px solid #ddd;
+      background-color: #fff;
+    }
+
+    .chat-input-area input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .chat-input-area button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background-color: #104e8b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<section class="featured-articles">
+<div class="chat-container">
+  <div class="chat-header">💬 Hỗ Trợ Trực Tuyến</div>
+  <div class="chat-box" id="chat-box">
+    <div class="message bot-message">Xin chào! Tôi có thể giúp gì cho bạn hôm nay?</div>
+  </div>
+  <div class="chat-input-area">
+    <input id="chat-input" type="text" placeholder="Nhập tin nhắn..." onkeypress="handleKeyPress(event)">
+    <button onclick="sendMessage()">Gửi</button>
+  </div>
+</div>
+
+<script>
+  function sendMessage() {
+    const input = document.getElementById("chat-input");
+    const message = input.value.trim();
+    const chatBox = document.getElementById("chat-box");
+
+    if (message !== "") {
+           const userMsg = document.createElement("div");
+      userMsg.className = "message user-message";
+      userMsg.textContent = message;
+      chatBox.appendChild(userMsg);
+
+      input.value = "";
+      setTimeout(() => {
+        const botReply = document.createElement("div");
+        botReply.className = "message bot-message";
+        botReply.textContent = getBotReply(message);
+        chatBox.appendChild(botReply);
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }, 500);
+
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  }
+
+  function handleKeyPress(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      sendMessage();
+    }
+  }
+
+  function getBotReply(userMessage) {
+    userMessage = userMessage.toLowerCase();
+    if (userMessage.includes("chào")) return "Xin chào! Bạn cần hỗ trợ gì?";
+    if (userMessage.includes("sứ mệnh")) return "Bạn có thể tìm hiểu về sứ mệnh tại mục 'Khám phá > Sứ mệnh'.";
+    if (userMessage.includes("liên hệ")) return "Bạn có thể vào trang 'Liên hệ' để gửi thông tin cho chúng tôi.";
+    return "Cảm ơn bạn đã nhắn tin! Chúng tôi sẽ phản hồi sớm nhất.";
+  }
+</script>
+
+</body>
+</html>
+  <footer>
+  <div class="footer-container">
+    <div class="footer-contact">
+      <h4>Liên hệ</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: 20 Quang Trung, Nghĩa Tân, Gia Nghĩa</p>
+      <p><i class="fas fa-phone-alt"></i> Điện thoại: 0982141340</p>
+      <p><i class="fas fa-envelope"></i> Email: NhiPhucQuynhAnh@khamphavutru.vn</p>
+    </div>
+    <div class="footer-social">
+      <h4>Kết nối với chúng tôi</h4>
+      <div class="social-icons">
+        <a href="https://facebook.com/toyeuthienvanhoc" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@ThuVienThienVan" target="_blank" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://tiktok.com/@thienvanvutruhoc" target="_blank" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+ </footer>
+   <script>
+    const toggleButton = document.getElementById('themeToggle');
+    const body = document.body;
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      toggleButton.innerHTML = body.classList.contains('light-mode')
+        ? '<i class="fas fa-sun"></i> Chế độ Sáng'
+        : '<i class="fas fa-moon"></i> Chế độ Tối';
+    });
+  </script>
+    });
+    function createShootingStar() {
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+        const startX = Math.random() * window.innerWidth;
+    const startY = -10;
+    const endX = Math.random() * window.innerWidth;
+
+        star.style.left = `${startX}px`;
+    star.style.top = `${startY}px`;
+    const size = Math.random() * 5 + 5; 
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+
+        const duration = Math.random() * 1 + 2; 
+    star.style.animationDuration = `${duration}s`;
+
+        const angle = Math.random() * 40 - 20; 
+    star.style.transform = `rotate(${angle}deg)`;
+
+       document.body.appendChild(star);
+
+       setTimeout(() => {
+      star.remove();
+    }, duration * 1000);
+  }
+
+    setInterval(createShootingStar, 200);
+ </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khám Phá Vũ Trụ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <div class="toggle-theme">
+  <button id="themeToggle"><i class="fas fa-moon"></i> Chế độ Tối</button>
+</div>
+</head>
+<body>
+ <header class="hero">
+<video autoplay muted loop playsinline
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+    <source src="video/vid6.mp4" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video HTML5.
+  </video>
+
+  <div class="overlay">
+
+    <!-- Thanh top: tất cả nằm trong top-bar -->
+    <div class="top-bar">
+      <!-- Logo + Tên website -->
+      <div class="logo-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="Logo" class="logo" />
+        <h1 class="site-name">
+          <a href="index.html">Khám Phá Vũ Trụ</a>
+        </h1>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="navigation">
+        <div class="dropdown">
+          <button class="dropbtn">Khám phá</button>
+          <div class="dropdown-content">
+            <a href="mission.html">Sứ mệnh</a>
+            <a href="gallery.html">Thư viện</a>
+            <a href="news.html">Tin tức</a>
+            <a href="technology.html">Công nghệ</a>
+            <a href="planets.html">Hành tinh</a>
+            <a href="telescopes.html">Kính viễn vọng</a>
+            <a href="research.html">Nghiên cứu</a>
+          </div>
+        </div>
+        <a href="contact.html">Liên hệ</a>
+        <a href="faq.html">FAQ</a>
+        <a href="join.html">Gia nhập vũ trụ</a>
+      </nav>
+
+      <!-- Thanh tìm kiếm -->
+      <form class="search-box">
+        <input type="text" placeholder="Tìm kiếm thông tin...">
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+
+   
+  </div>
+</header>
+  <main style="padding: 40px;">
+    <section class="featured-articles" style="max-width: 1200px; margin: auto;">
+      <h2 style="text-align: center; font-size: 32px; margin-bottom: 30px;">🚀 Tàu vũ trụ và phương tiện phóng</h2>
+ 
+      <div style="text-align: center; margin-bottom: 20px;">
+        <img src="https://media-cdn-v2.laodong.vn/storage/newsportal/2021/4/13/898429/NASA.jpeg" alt="Công nghệ" style="width: 100%; max-width: 600px; border-radius: 10px;">
+      </div>
+ 
+      <p style="font-size: 18px; color: white; text-align: justify; margin-bottom: 40px;">
+        <strong>Hệ thống Phóng Không gian (SLS):</strong> Tên lửa mạnh nhất từng được NASA chế tạo, phục vụ cho sứ mệnh Artemis đưa con người trở lại Mặt Trăng.
+        <br><strong>Orion:</strong> Tàu vũ trụ chở người tiên tiến cho các sứ mệnh không gian sâu.
+      </p>
+ 
+      <!-- Danh sách công nghệ -->
+      <div class="technology-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+ 
+        <!-- Mỗi phần tử technology-item -->
+<article style="background-color: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+          <h3 style="color: #003366;">🔧 Công nghệ robot</h3>
+          <img src="https://nld.mediacdn.vn/291774122806476800/2024/8/14/untitled-17235970258331815848232.jpg" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+          <p style="color: black; margin-top: 10px; text-align: justify;">Rover Perseverance và Curiosity là những robot tự hành hiện đại trên sao Hỏa, tích hợp AI, cảm biến và công cụ phân tích đất đá.<br>Robot Mặt Trăng hỗ trợ thăm dò và khai thác vật liệu không gian.</p>
+        </article>
+ 
+        <article style="background-color: #2980b9; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+          <h3 style="color: #003366;">🤖 Trí tuệ nhân tạo & Học máy</h3>
+          <img src="https://media.vietnamplus.vn/images/dadb342ab8dc2808f476878603a4ae30f51a46a1cf2dca21945ee953332fa22b60a2e46ac6f84457443b8370c29023f9f04ff440d16bf78164c9afb39547c74a/ContourCrafting.jpg.webp" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+          <p style="margin-top: 10px; text-align: justify;">AI giúp phân tích ảnh thiên văn, định hướng tàu không người lái, xử lý thông tin và tương tác thông minh với môi trường không gian.</p>
+        </article>
+ 
+        <article style="background-color: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+          <h3 style="color: #003366;">🔭 Kính viễn vọng & Công nghệ quan sát</h3>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telescope_Kepler-NASA.jpeg/400px-Telescope_Kepler-NASA.jpeg" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+          <p style="color: black;margin-top: 10px; text-align: justify;">James Webb và Hubble giúp con người quan sát sâu vào vũ trụ, tìm kiếm sự sống và hiểu về nguồn gốc thiên hà.</p>
+        </article>
+ 
+        <article style="background-color:#2980b9; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+          <h3 style="color: #003366;">🌱 Công nghệ môi trường & Hỗ trợ sự sống</h3>
+          <img src="https://thinksmart.com.vn/wp-content/uploads/2024/01/1-4.webp" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+          <p style="margin-top: 10px; text-align: justify;">MOXIE tạo oxy từ CO₂ trên sao Hỏa, hỗ trợ sự sống ngoài Trái Đất. Hệ thống ISS tái chế nước và không khí hiệu quả cao.</p>
+        </article>
+ 
+ 
+        <article style="background-color: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+          <h3 style="color: #003366;">👨‍🚀 Trang phục và thiết bị phi hành gia</h3>
+tutu
+<img src="https://nld.mediacdn.vn/291774122806476800/2024/8/14/untitled-17235970258331815848232.jpg" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+          <p style="color: black; margin-top: 10px; text-align: justify;">Rover Perseverance và Curiosity là những robot tự hành hiện đại trên sao Hỏa, tích hợp AI, cảm biến và công cụ phân tích đất đá.<br>Robot Mặt Trăng hỗ trợ thăm dò và khai thác vật liệu không gian.</p>
+        </article>
+               
+ 
+        <article style="background-color: #2980b9; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+          <h3 style="color: #003366;">☀️ Động cơ điện mặt trời</h3>
+          <img src="https://cdnphoto.dantri.com.vn/DDUz5lbHmTdT81DorSnINsINZrY=/thumb_w/990/2024/04/22/bai-bien-tap-17docx-1713771810625.png" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+          <p style="margin-top: 10px; text-align: justify;">Sử dụng năng lượng mặt trời để vận hành robot và tàu vũ trụ hiệu quả, thân thiện môi trường và tối ưu nhiên liệu cho sứ mệnh dài ngày.</p>
+        </article>
+      </div>
+ 
+      <div style="text-align: center; margin-top: 50px;">
+      <a href="index.html" class="back-to-home-btn">Quay lại Trang Chủ</a>
+
+      </div>
+    </section>
+  </main>
+ 
+  <footer>
+  <div class="footer-container">
+    <div class="footer-contact">
+      <h4>Liên hệ</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: 20 Quang Trung, Nghĩa Tân, Gia Nghĩa</p>
+      <p><i class="fas fa-phone-alt"></i> Điện thoại: 0982141340</p>
+      <p><i class="fas fa-envelope"></i> Email: PhucNhiQuynhAnh@khamphavutru.vn</p>
+    </div>
+    <div class="footer-social">
+      <h4>Kết nối với chúng tôi</h4>
+      <div class="social-icons">
+        <a href="https://facebook.com/toyeuthienvanhoc" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@ThuVienThienVan" target="_blank" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://tiktok.com/@thienvanvutruhoc" target="_blank" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+ </footer>
+  <script>
+    const toggleButton = document.getElementById('themeToggle');
+    const body = document.body;
+
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('light-mode')) {
+        toggleButton.innerHTML = '<i class="fas fa-sun"></i> Chế độ Sáng';
+      } else {
+        toggleButton.innerHTML = '<i class="fas fa-moon"></i> Chế độ Tối';
+      }
+    });
+function createShootingStar() {
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+    // Đặt vị trí ngôi sao ngẫu nhiên trên màn hình
+    const startX = Math.random() * window.innerWidth;
+    const startY = -10;
+    const endX = Math.random() * window.innerWidth;
+
+    // Đặt vị trí ban đầu cho sao
+    star.style.left = `${startX}px`;
+    star.style.top = `${startY}px`;
+    const size = Math.random() * 5 + 5; // Kích thước ngôi sao từ 5px đến 10px
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+
+    // Tạo thời gian ngẫu nhiên để sao băng rơi
+    const duration = Math.random() * 1 + 2; // Thời gian giữa 2 và 3 giây
+    star.style.animationDuration = `${duration}s`;
+
+    // Điều chỉnh chuyển động sao theo đường chéo
+    const angle = Math.random() * 40 - 20; // Đường chéo ngẫu nhiên
+    star.style.transform = `rotate(${angle}deg)`;
+
+    // Thêm sao vào body
+    document.body.appendChild(star);
+
+    // Xóa sao khi kết thúc chuyển động
+    setTimeout(() => {
+      star.remove();
+    }, duration * 1000);
+  }
+
+  // Tạo sao băng liên tục
+  setInterval(createShootingStar, 200); // Tạo sao mỗi 200ms
+
+  </script>
+</body>
+</html>

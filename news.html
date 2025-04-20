@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khám Phá Vũ Trụ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <div class="toggle-theme">
+  <button id="themeToggle"><i class="fas fa-moon"></i> Chế độ Tối</button>
+</div>
+</head>
+<body>
+<header class="hero">
+<video autoplay muted loop playsinline
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+    <source src="video/vid3.mp4" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video HTML5.
+  </video>
+
+  <div class="overlay">
+
+    <!-- Thanh top: tất cả nằm trong top-bar -->
+    <div class="top-bar">
+      <!-- Logo + Tên website -->
+      <div class="logo-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="Logo" class="logo" />
+        <h1 class="site-name">
+          <a href="index.html">Khám Phá Vũ Trụ</a>
+        </h1>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="navigation">
+        <div class="dropdown">
+          <button class="dropbtn">Khám phá</button>
+          <div class="dropdown-content">
+            <a href="mission.html">Sứ mệnh</a>
+            <a href="gallery.html">Thư viện</a>
+            <a href="news.html">Tin tức</a>
+            <a href="technology.html">Công nghệ</a>
+            <a href="planets.html">Hành tinh</a>
+            <a href="telescopes.html">Kính viễn vọng</a>
+            <a href="research.html">Nghiên cứu</a>
+          </div>
+        </div>
+        <a href="contact.html">Liên hệ</a>
+        <a href="faq.html">FAQ</a>
+        <a href="join.html">Gia nhập vũ trụ</a>
+      </nav>
+
+      <!-- Thanh tìm kiếm -->
+      <form class="search-box">
+        <input type="text" placeholder="Tìm kiếm thông tin...">
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+
+     </div>
+</header>  <main>
+  <section class="featured-articles">
+    <div class="news-item">
+      <h3>Tuần lễ NASA lần đầu tổ chức tại Việt Nam</h3>
+      <p>Tuần lễ Vietnam Space Week sẽ chính thức diễn ra từ ngày 5 đến 9/6, trải dài tại ba địa điểm trọng điểm: Hậu Giang, TP. Hồ Chí Minh và Bình Định. Đây là sự kiện không gian quy mô lớn, nhằm giới thiệu những thành tựu nổi bật trong lĩnh vực hàng không vũ trụ, đồng thời tạo cơ hội kết nối thế hệ trẻ Việt Nam với Cơ quan Hàng không và Vũ trụ Hoa Kỳ (NASA).<br> Với chuỗi hoạt động phong phú như triển lãm tương tác, hội thảo khoa học, giao lưu với chuyên gia và phi hành gia quốc tế, sự kiện kỳ vọng sẽ truyền cảm hứng mạnh mẽ cho giới trẻ yêu thích công nghệ, khoa học và khám phá vũ trụ. Vietnam Space Week không chỉ là cầu nối giữa Việt Nam và các nền khoa học tiên tiến, mà còn là chất xúc tác để nuôi dưỡng những ước mơ vươn ra không gian của thế hệ tương lai.
+       
+        </p>
+      <a href="https://vnexpress.net/tuan-le-nasa-lan-dau-to-chuc-tai-viet-nam-4613453.html" target="_blank">Đọc thêm</a>
+    </div>
+    <div class="news-item">
+      <h3>Việt Nam hợp tác với NASA về vũ trụ</h3>
+      <p>
+        Trong khuôn khổ chuyến thăm đầy ý nghĩa lần này, đoàn đại diện NASA sẽ có buổi làm việc chính thức với Bộ Khoa học và Công nghệ vào chiều nay, nhằm thảo luận các cơ hội hợp tác song phương trong lĩnh vực không gian và nghiên cứu khoa học công nghệ cao. Cuộc gặp gỡ hứa hẹn mở ra nhiều định hướng mới trong việc đưa các chương trình giáo dục, nghiên cứu và đổi mới sáng tạo tại Việt Nam tiệm cận với tiêu chuẩn quốc tế.<br>Vào sáng mai, đoàn sẽ tiếp tục chuyến hành trình với chuyến thăm Khu công nghệ cao TP. Hồ Chí Minh (SHTP) – trung tâm đổi mới sáng tạo hàng đầu phía Nam. Tại đây, NASA sẽ được giới thiệu về các dự án khoa học – công nghệ trọng điểm, cũng như cơ hội kết nối với hệ sinh thái khởi nghiệp công nghệ cao. Đây là dịp quan trọng để tăng cường mối liên kết giữa nghiên cứu vũ trụ và ứng dụng thực tiễn trong đời sống, công nghiệp và giáo dục tại Việt Nam.</p>
+      <a href="https://vnexpress.net/viet-nam-hop-tac-voi-nasa-ve-vu-tru-2212313.html" target="_blank">Đọc thêm</a>
+    </div>
+    <div class="news-item">
+      <h3>Robot NASA có thể đào 10.000 kg đất trong một ngày Mặt Trăng</h3>
+      <p>Robot IPEx là một cỗ máy thông minh ứng dụng công nghệ tiên tiến hàng đầu, được thiết kế đặc biệt để hoạt động trong điều kiện khắc nghiệt của bề mặt Mặt Trăng. Với khả năng đào xới chính xác, thu thập mẫu đất đá và vận chuyển chúng một cách an toàn đến các trạm xử lý, IPEx đóng vai trò then chốt trong chuỗi khai thác và chiết xuất các tài nguyên quý giá như Helium-3, nước từ băng, và kim loại hiếm – những yếu tố có thể cách mạng hóa ngành năng lượng và công nghệ trong tương lai.<br>Được tích hợp trí tuệ nhân tạo và hệ thống dẫn đường tự động, IPEx không chỉ tối ưu hóa hiệu suất khai thác mà còn có thể thích nghi linh hoạt với địa hình phức tạp, đảm bảo hoạt động bền bỉ trong môi trường không trọng lực và nhiệt độ cực đoan. Đây là một bước tiến quan trọng trong hành trình hiện thực hóa việc xây dựng cơ sở hạ tầng bền vững trên Mặt Trăng và tiến xa hơn đến mục tiêu định cư ngoài Trái Đất.</p>
+      <a href="https://vnexpress.net/robot-nasa-co-the-dao-10-000-kg-dat-trong-mot-ngay-mat-trang-4846206.html" target="_blank">Đọc thêm</a>
+    </div>
+    <div style="margin-top: 40px;">
+        <a href="index.html" class="back-to-home-btn">Quay lại Trang Chủ</a>
+      </div>
+  </section>
+</main>
+  <footer>
+  <div class="footer-container">
+    <div class="footer-contact">
+      <h4>Liên hệ</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: 20 Quang Trung, Nghĩa Tân, Gia Nghĩa</p>
+      <p><i class="fas fa-phone-alt"></i> Điện thoại: 0982141340</p>
+      <p><i class="fas fa-envelope"></i> Email: PhucNhiQuynhAnh@khamphavutru.vn</p>
+    </div>
+    <div class="footer-social">
+      <h4>Kết nối với chúng tôi</h4>
+      <div class="social-icons">
+        <a href="https://facebook.com/toyeuthienvanhoc" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@ThuVienThienVan" target="_blank" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://tiktok.com/@thienvanvutruhoc" target="_blank" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+ </footer>
+  <script>
+    const toggleButton = document.getElementById('themeToggle');
+    const body = document.body;
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('light-mode')) {
+        toggleButton.innerHTML = '<i class="fas fa-sun"></i> Chế độ Sáng';
+      } else {
+        toggleButton.innerHTML = '<i class="fas fa-moon"></i> Chế độ Tối';
+      }
+    });
+function createShootingStar() {
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+       const startX = Math.random() * window.innerWidth;
+    const startY = -10;
+    const endX = Math.random() * window.innerWidth;
+
+        star.style.left = `${startX}px`;
+    star.style.top = `${startY}px`;
+    const size = Math.random() * 5 + 5; 
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+
+    
+    const duration = Math.random() * 1 + 2; 
+    star.style.animationDuration = `${duration}s`;
+
+    
+    const angle = Math.random() * 40 - 20; 
+    star.style.transform = `rotate(${angle}deg)`;
+
+        document.body.appendChild(star);
+
+        setTimeout(() => {
+      star.remove();
+    }, duration * 1000);
+  }
+
+  
+  setInterval(createShootingStar, 200); 
+
+  </script>
+
+
+</body>
+</html>

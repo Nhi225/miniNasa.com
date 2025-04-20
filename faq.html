@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ Vũ Trụ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white min-h-screen py-10 px-4">
+
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-4xl font-bold text-center text-blue-400 mb-10">FAQ Về Vũ Trụ</h1>
+
+    <!-- Accordion -->
+    <div class="space-y-4">
+      <div class="border border-gray-800 rounded-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 transition" onclick="toggleFAQ(this)">
+          <span class="text-lg font-medium">Vũ trụ rộng bao nhiêu?</span>
+          <span class="text-2xl symbol">+</span>
+        </button>
+        <div class="faq-answer hidden px-4 text-gray-300">
+          Vũ trụ quan sát được rộng khoảng 93 tỷ năm ánh sáng...
+        </div>
+      </div>
+
+      <div class="border border-gray-800 rounded-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 transition" onclick="toggleFAQ(this)">
+          <span class="text-lg font-medium">Thiên hà nào ở gần dải Ngân Hà nhất?</span>
+          <span class="text-2xl symbol">+</span>
+        </button>
+        <div class="faq-answer hidden px-4 text-gray-300">
+          Thiên hà Tiên Nữ
+        </div>
+      </div>
+
+      <div class="border border-gray-800 rounded-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 transition" onclick="toggleFAQ(this)">
+          <span class="text-lg font-medium">Mặt trời chủ yếu được tạo thành từ gì?</span>
+          <span class="text-2xl symbol">+</span>
+        </button>
+        <div class="faq-answer hidden px-4 text-gray-300">
+          Hydrogen
+        </div>
+      </div>
+
+      <div class="border border-gray-800 rounded-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 transition" onclick="toggleFAQ(this)">
+          <span class="text-lg font-medium">Những cơn bão lớn mà mặt trời tạo ra được gọi là gì?</span>
+          <span class="text-2xl symbol">+</span>
+        </button>
+        <div class="faq-answer hidden px-4 text-gray-300">
+          Bão mặt trời
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form id="question-form" class="mt-12 bg-gray-900 p-6 rounded-lg shadow-lg space-y-4">
+      <h2 class="text-2xl font-semibold text-blue-300 mb-2">Gửi câu hỏi của bạn</h2>
+
+      <div>
+        <input type="text" id="faq-name" placeholder="Tên của bạn" class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-400">
+        <p id="error-faq-name" class="text-red-400 text-sm mt-1 hidden">Vui lòng nhập tên.</p>
+      </div>
+
+      <div>
+        <input type="email" id="faq-email" placeholder="Email của bạn" class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-400">
+        <p id="error-faq-email" class="text-red-400 text-sm mt-1 hidden">Vui lòng nhập email hợp lệ.</p>
+      </div>
+
+      <div>
+        <textarea id="faq-question" rows="4" placeholder="Câu hỏi của bạn về vũ trụ..." class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-400"></textarea>
+        <p id="error-faq-question" class="text-red-400 text-sm mt-1 hidden">Vui lòng nhập câu hỏi.</p>
+      </div>
+
+      <div class="flex flex-wrap justify-between items-center gap-4 pt-2">
+        <button type="submit" class="bg-blue-400 hover:bg-blue-300 text-black font-semibold px-6 py-2 rounded transition">
+          Gửi câu hỏi
+        </button>
+
+        <a href="index.html" class="bg-blue-400 hover:bg-blue-300 text-black font-semibold px-6 py-2 rounded transition">
+          Trang Chủ
+        </a>
+      </div>
+
+      <p id="thanks-faq" class="text-green-400 font-medium hidden pt-2">Cảm ơn bạn đã gửi câu hỏi, chúng mình sẽ gửi câu trả lời sớm nhất đến gmail của bạn!</p>
+    </form>
+  </div>
+
+  <!-- JavaScript xử lý accordion và form -->
+  <script>
+    function toggleFAQ(button) {
+      const answer = button.nextElementSibling;
+      const symbol = button.querySelector(".symbol");
+      answer.classList.toggle("hidden");
+      symbol.textContent = answer.classList.contains("hidden") ? "+" : "−";
+    }
+
+    document.getElementById("question-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("faq-name");
+      const email = document.getElementById("faq-email");
+      const question = document.getElementById("faq-question");
+
+      let valid = true;
+      document.querySelectorAll("#question-form .text-red-400").forEach(el => el.classList.add("hidden"));
+
+      if (name.value.trim() === "") {
+        document.getElementById("error-faq-name").classList.remove("hidden");
+        valid = false;
+      }
+      if (email.value.trim() === "" || !email.value.includes("@")) {
+        document.getElementById("error-faq-email").classList.remove("hidden");
+        valid = false;
+      }
+      if (question.value.trim() === "") {
+        document.getElementById("error-faq-question").classList.remove("hidden");
+        valid = false;
+      }
+
+      if (valid) {
+        document.getElementById("thanks-faq").classList.remove("hidden");
+        this.reset();
+      }
+    });
+  </script>
+
+ <footer class="bg-gray-900 text-white py-10 mt-12">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 text-center md:text-left">
+    
+    <!-- Thông tin liên hệ -->
+    <div class="footer-container">
+      <h4 class="text-lg font-bold text-blue-400 mb-2">Liên hệ</h4>
+      <p><i class="fas fa-map-marker-alt mr-2"></i>Địa chỉ: 20 Quang Trung, Nghĩa Tân, Gia Nghĩa</p>
+      <p><i class="fas fa-phone-alt mr-2"></i>Điện thoại: 
+        <a href="tel:0909123456" class="text-blue-400 hover:underline">0982141340</a>
+      </p>
+      <p><i class="fas fa-envelope mr-2"></i>Email: 
+        <a href="mailto:info@khamphavutru.vn" class="text-blue-400 hover:underline">PhucNhiQuynhAnh@khamphavutru.vn</a>
+      </p>
+    </div>
+
+    <!-- Mạng xã hội -->
+    <div class="footer-social">
+      <h4 class="text-lg font-bold text-blue-400 mb-4">Kết nối với chúng tôi</h4>
+      <div class="flex justify-center md:justify-start space-x-6 text-2xl">
+        <a href="https://facebook.com/toyeuthienvanhoc" target="_blank" class="hover:text-blue-400" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@ThuVienThienVan" target="_blank" class="hover:text-red-500" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://tiktok.com/@thienvanvutruhoc" target="_blank" class="hover:text-gray-200" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
